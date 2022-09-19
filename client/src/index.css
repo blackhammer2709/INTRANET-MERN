@@ -1,0 +1,435 @@
+:root{
+  --blanco:#fff;
+  --gris1: #edf2f6;
+  --gris2: #2f3848;
+  --gris3: #1a202d;
+  --negro: #000;
+  
+  
+}
+
+*,*:before,*:after{
+  box-sizing: inherit;
+}
+
+html{
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 14px;
+}
+body {
+  min-height: 100%;
+  background-color: var(--gris1);
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-family: var(--textFont);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2{
+  font-family: var(--headingFont);
+  font-weight: 900;
+  margin: 0 0 4rem 0;
+  text-align: center;
+  color: var(--gris2);
+}
+
+h1 span{
+  font-weight: 400;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2.4rem;
+}
+
+ul{
+  list-style: none;
+  color: var(--gris2);
+}
+
+a{
+  text-decoration: none;
+  color: var(--gris2);
+}
+
+/** ESTILO DE BOTONES **/
+.btn{
+  margin-top: 2rem;
+  font-family: var(--headingFont);
+  padding: 1.5rem;
+  font-size: 1.4;
+  font-weight: 400;
+  border-radius: .5rem;
+  border: none;
+  transition: background-color .3s ease;
+}
+
+.btn:hover{
+  cursor: pointer;
+}
+
+.btn-primario{
+  background-color: rgb(2, 116, 2)/* var(--gris2) me gustaria otro color, pero tambien creo que esta bien*/;
+  color: var(--blanco);
+}
+
+.btn-crud{
+  background-color: var(--gris3);
+  color: var(--blanco);
+}
+
+.btn-crud:hover{
+  background-color: #094474;
+}
+
+.btn-recuperar{
+  background-color: rgb(1, 86, 126);/* var(--gris2) me gustaria otro color, pero tambien creo que esta bien*/;
+  color: var(--blanco);
+}
+.btn-primario:hover{
+  background-color: rgb(2, 65, 2);/*var(--gris3)*/
+}
+
+.btn-recuperar:hover{
+  background-color: rgb(2, 61, 88);
+}
+
+.btn-secundario{
+  background-color: var(--gris1);
+}
+
+.btn-secundario:hover{
+  background-color: #7c0d0d94;
+}
+
+.btn-block{
+  display: block;
+  width: 100%;
+}
+
+.btn-submit{
+  background-color: rgb(2, 137, 179);
+  color: var(--blanco);
+}
+.btn-submit:hover{
+  background-color: rgb(0, 89, 116);
+}
+
+.btn-blank{
+  margin: 0;
+  padding: 0;
+  display: block;
+  background-color: transparent;
+}
+
+.cerrar-sesion{
+  color: var(--blanco);
+}
+/*aqui hay algo extraño en ves de cambiar el color cuando baje de 768 lo pone para todo mayor de 768*/
+@media (min-width: 768px) {
+  .contenedor-app{
+    display: flex;
+    min-height: 100vh;
+  }
+
+  aside{
+    background-color: var(--gris1);
+    flex: 0 0 300px;
+  }
+
+  .seccion-principal{
+    flex: 1;
+  }
+}
+
+/* ESTILOS BARRA LATERAL - CREO QUE PUEDE USARSE PARA UN NAVBAR */
+
+aside{
+  padding: 3rem;
+}
+
+.formulario-nuevo-proyecto{
+  margin-top: 6rem;
+}
+
+.formulario-nuevo-proyecto .input-text{
+  border-bottom: 1px solid var(--gris2);
+  border-radius: 0;
+  background-color: var(--gris1);
+}
+
+.formulario-nuevo-proyecto .input-text::placeholder{
+  color: var(--gris2);
+}
+
+.proyectos{
+  margin-top: 10rem;
+}
+
+.listado-usuarios li{
+  margin-bottom: 2rem;
+}
+
+.listado-usuarios li a{
+  font-size: 1.4rem;
+  color: var(--gris2);
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.app-header{
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:  var(--gris3) ;/* que color te gusta mas ?rgb(1, 114, 167)*/
+  padding: 4rem;
+}
+
+.nombre-usuario, .text-nav{
+  color: var(--blanco);
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.nombre-usuario span{
+  font-weight: 900;
+}
+
+
+.nav-principal a{
+  color: var(--blanco);
+  text-decoration: none;
+  margin-right: 5rem;
+  font-size: 1.5rem;
+}
+
+
+a:hover{
+    color:#9192ac;
+}
+
+.nav-principal a:last-of-type{
+  margin-right: 0;
+}
+
+/* ESTILOS FORMULARIOS CREAR Y EDITAR */
+
+.formulario{
+  background-color: var(--gris2);
+  padding: 4rem;
+  max-height: 50vh;
+}
+
+.formulario form{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contenedor-input{
+  display: flex;
+}
+
+.contenedor-input label{
+  margin-bottom: 1rem;
+  color: var(--blanco);
+}
+
+.input-text{
+  padding: 1rem;
+  border: none;
+  border-radius: .5rem;
+  flex: 1;
+  width: 100%;
+}
+
+/* LISTADO DE entradaS CREO SE PUEDE USAR PARA LISTAR LOS CRUDS*/
+
+.contenedor-entradas{
+  border: #000 1px solid;
+}
+
+
+
+.entrada{
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--blanco);
+  padding: .5rem 2rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+}
+
+.sombra{
+  -webkit-box-shadow: 0px 4px 10px -3px rgba(117, 177, 177, 1);
+  -moz-box-shadow: 0px 4px 10px -3px rgba(117, 177, 177, 1);
+  box-shadow: 0px 4px 10px -3px rgba(117, 177, 177, 1);
+}
+
+.sombra-dark{
+  -webkit-box-shadow: 0px 6px 11px -8px rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: 0px 4px 10px -3px rgba(0, 0, 0, 0.9);
+  box-shadow: 0px 4px 10px -3px rgba(0, 0, 0, 0.9);
+}
+
+.entrada .acciones .btn:first-of-type{
+  margin-right: 1rem;
+}
+
+.entrada p{
+  font-size: 1.6rem;
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.entrada .btn{
+  padding: .8rem;
+  font-size: 1.4rem;
+  border-radius:0;
+  margin: 0;
+}
+
+.fecha{
+  margin-right: 1rem;
+}
+
+.fecha p, .mensaje{
+  font-weight: 900;
+  font-family: var(--textFont);
+  font-size: 1rem;
+  padding: .5rem;
+  border-radius: .5rem;
+  cursor: text;
+  border: none;
+}
+
+.mensaje{
+  text-align: center;
+  font-size: 1.6rem;
+  border-radius: 0;
+}
+
+.mensaje:hover{
+  cursor: default;
+}
+
+.completo,.correcto{
+  background-color: rgba(154, 252, 154, .3); /*creo que se puede cambiar por otro color*/
+  color: var(--gris3);
+}
+
+.incompleto{
+  background-color: rgba(255, 178, 178, .4);
+  color: var(--gris3);
+}
+
+.error{
+  max-width: 600px;
+  margin: 2rem auto 0 auto;
+  background-color: rgb(170, 0, 0);
+  color: var(--blanco);
+}
+
+.entrada-enter, .proyecto-enter{
+  opacity: 0;
+}
+
+.entrada-enter-active, .proyecto-enter-active{
+  opacity: 1;
+  transition: opacity 200ms;
+}
+
+.entradas-exit, .proyecto-exit{
+  opacity: 1;
+}
+
+.entradas-exit-active, .proyecto-exit-active{
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+.form-usuario{
+  background-color: var(--gris2);/*#062e5c*/
+  height: 100vh;
+  min-height: 750px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor-form{
+  padding: 5rem 3rem;
+  max-width: 500px;
+  width: 95%;
+  background-color: var(--blanco);
+  border-radius: 1rem;
+  margin: 1%; /*primer cambio*/
+}
+
+.campo-form{
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.campo-form:last-of-type{
+  margin: 0;
+}
+
+.campo-form label{
+  flex: 0 0 100px;
+  font-family: var(--textFont);
+}
+
+.campo-form input[type="password"],
+.campo-form input[type="email"],
+.campo-form input[type="text"]{
+  border: 1px solid #e1e1e1;
+  padding: 1rem;
+  flex: 1;
+}
+
+.enlace-cuenta{
+  margin-top: 2rem;
+  display: block;
+  opacity: .7;
+}
+
+.alerta{
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  font-family: var(--headingFont);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width:768px){
+  .alerta{
+    width: auto;
+    top: 30px;
+    right: 10px;
+    left: auto;
+  }
+}
+
+.alerta-ok{
+  background-color: rgb(109, 211, 109);
+  color: rgb(2, 103, 2);
+}
+
+.alerta-error{
+  background-color: rgb(230, 78, 78);
+  color: var(--blanco);
+}

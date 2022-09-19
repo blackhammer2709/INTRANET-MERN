@@ -1,0 +1,35 @@
+.Contenedor{
+    width: 80%;
+    max-width: 1000px;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+
+table .head{
+    background: rgb(3, 113, 163);
+}
+
+table .head td{
+    color: #fff;
+    font-family: 'Arial',sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
+
+table tr td{
+    border:1px solid #ccc;
+    padding: 2px;
+    font-size: 14px;
+    color: #555;
+}
+
+
+h2 {
+    color: white;
+    font-weight: normal;
+    font-size: 35px;
+    font-family: Arial;
+    text-transform: uppercase;
+  }
